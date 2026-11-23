@@ -47,6 +47,8 @@ The Android Java client provides:
 - Message analysis result display.
 - Backend error feedback.
 
+The Android interface uses a modern Material FinTech theme with teal primary controls, orange secondary accents, warm light surfaces, and dedicated safe, warning, and danger colors.
+
 The Android debug app was built successfully with Android SDK 34 and the project SDK 35 target configuration was adjusted to the installed SDK.
 
 ## 3. Architecture
@@ -115,11 +117,11 @@ The app updates its status after an issued backend JWT is stored. It remains on 
 
 ![Signed-in state](../screenshots/03_signed_in_state.png)
 
-### 6.4 Message result before API model alignment
+### 6.4 Message entry state
 
-This screenshot documents the first emulator result during testing. The Android model expected a different response shape than the backend message-analysis DTO, so the result showed unknown and false placeholder fields.
+This screenshot shows the restyled message input populated with a suspicious refund and remote-access request.
 
-![Message result before model fix](../screenshots/04_message_result_before_model_fix.png)
+![Restyled message entry state](../screenshots/04_message_result_before_model_fix.png)
 
 ### 6.5 Corrected high-risk message result
 
@@ -139,17 +141,17 @@ The QR scanning control opens the Android camera permission prompt. The app requ
 
 ![QR camera permission prompt](../screenshots/06_qr_permission.png)
 
-### 6.7 QR camera error
+### 6.7 QR live camera
 
-The emulator does not provide a usable physical camera, so the ZXing camera activity reports that the Android camera encountered a problem.
+After camera permission is granted, the emulator ZXing activity opens the available camera preview.
 
-![QR camera error state](../screenshots/07_qr_camera_error.png)
+![QR live camera state](../screenshots/07_qr_camera_error.png)
 
-### 6.8 Return state after QR error
+### 6.8 Return state after QR scan
 
-The camera error dialog is dismissible and returns control to the app. The app remains usable for message analysis.
+Closing the ZXing scanner returns control to the themed app. The app remains usable for message analysis.
 
-![App state after QR camera error](../screenshots/08_app_after_qr_error.png)
+![App state after QR scanner](../screenshots/08_app_after_qr_error.png)
 
 ## 7. Test results
 
