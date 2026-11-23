@@ -1,0 +1,30 @@
+# Java and Maven
+backend/target/
+backend/src/test/
+backend/javac_main_args.txt
+backend/src/main/resources/application-test.yml
+*.class
+*.jar
+
+# Android and Gradle
+.gradle/
+build/
+app/build/
+local.properties
+captures/
+*.apk
+*.aab
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Environment and secrets
+.env
+*.keystore
+*.jks
+
+# Generated plan files
+upi_shield_requirements_and_implementation_plan.md
+UPI_Shield_Requirements_and_Implementation_Plan.docx
